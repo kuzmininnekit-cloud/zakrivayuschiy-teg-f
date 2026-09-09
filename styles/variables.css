@@ -1,1 +1,37 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-family-base: "Inter", sans-serif;
+  --font-family-accent: "PressStart2P", sans-serif;
+  --font-weight-text: 400;
+  --font-weight-title: 700;
+  --page-gradient:
+    repeating-linear-gradient(
+      to right,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --logo-width: clamp(21.4375rem, 18.973rem + 10.52vw, 28.4375rem);
+  --logo-title-font-size: clamp(3.0625rem, 2.71rem + 1.5vw, 4.0625rem);
+  --logo-closing-tag-font-size: clamp(0.875rem, 0.677rem + 0.85vw, 1.4375rem);
+  --header-height: clamp(41.6875rem, 35.24rem + 27.51vw, 60rem);
+  --block-width: clamp(23.4375rem, 16.285rem + 30.52vw, 43.75rem);
+  --block-height: clamp(20.4375rem, 19.535rem + 3.85vw, 23rem);
+  --text-stroke-color: #fff;
+  --save-button-width: clamp(19.125rem, 18.047rem + 4.6vw, 22.1875rem);
+  --save-button-height: clamp(3.4375rem, 5.8875rem - 2.72vw, 5.25rem);
+  --accent-color: #000;
+  --button-text-color: #fff;
+  --contour-color: #000;
+  --animation-fill-color: #ff0000;
+}
