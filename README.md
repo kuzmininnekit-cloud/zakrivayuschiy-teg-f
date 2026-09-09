@@ -10,4 +10,4 @@
 
 Ссылка на репозиторий: https://github.com/kuzmininnekit-cloud/zakrivayuschiy-teg-f.
 
-Ссылка на опубликованный сайт: 
+Ссылка на опубликованный сайт: https://kuzmininnekit-cloud.github.io/zakrivayuschiy-teg-f/
