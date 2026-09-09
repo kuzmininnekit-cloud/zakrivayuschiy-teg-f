@@ -160,11 +160,14 @@
 .card__icon-button {
   flex-shrink: 0;
   padding: 0;
-  border: none;
+  border: 2px solid transparent;
+  box-sizing: border-box;
   background: none;
   cursor: pointer;
   width: 39px;
   height: 36px;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
 .like-icon {
@@ -192,6 +195,10 @@
   font-size: 14px;
   line-height: 90%;
   color: #000;
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 .save-button {
@@ -208,10 +215,6 @@
   background-color: #fff;
   cursor: pointer;
   color: #000;
-}
-
-.save-button svg {
-  flex-shrink: 0;
 }
 
 .save-button .button__text {
@@ -290,10 +293,6 @@
   transition: box-shadow 0.3s ease;
 }
 
-.button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color);
-}
-
 .button::before {
   content: "";
   position: absolute;
@@ -314,30 +313,12 @@
   box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
-.button__text {
-  position: relative;
-  z-index: 1;
-  color: var(--button-text-color);
-  mix-blend-mode: difference;
-}
-
 .save-button svg {
   position: relative;
   z-index: 1;
   color: var(--button-text-color);
   mix-blend-mode: difference;
-}
-
-.card__icon-button {
-  padding: 0;
-  border: 2px solid transparent;
-  box-sizing: border-box;
-  background: none;
-  cursor: pointer;
-  width: 27px;
-  height: 24px;
-  outline: none;
-  transition: border-color 0.3s ease;
+  flex-shrink: 0;
 }
 
 .card__icon-button:focus {
