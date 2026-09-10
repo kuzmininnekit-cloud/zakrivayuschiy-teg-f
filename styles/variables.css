@@ -34,4 +34,5 @@
   --button-text-color: #fff;
   --contour-color: #000;
   --animation-fill-color: #ff0000;
+  --save-icon-size: clamp(1.3125rem, 1.904rem - 0.6573vw, 1.75rem);
 }

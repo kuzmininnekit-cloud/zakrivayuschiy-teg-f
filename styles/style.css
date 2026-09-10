@@ -22,8 +22,8 @@
 
 .header {
   width: var(--block-width);
-  height: var(--header-height);
-  margin: 0 auto;
+  min-height: var(--header-height);
+  margin: 0px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@
 
 .header__logo {
   width: var(--block-width);
-  height: var(--block-height);
+  min-height: var(--block-height);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,25 +83,31 @@
   background-color: #fff;
 }
 
-.content__card:nth-child(1) .content__card-image {
+.filter-grayscale {
   filter: grayscale(100%);
 }
-.content__card:nth-child(2) .content__card-image {
+
+.filter-sepia {
   filter: sepia(70%);
 }
-.content__card:nth-child(3) .content__card-image {
+
+.filter-contrast {
   filter: contrast(150%);
 }
-.content__card:nth-child(4) .content__card-image {
+
+.filter-blur {
   filter: blur(1px);
 }
-.content__card:nth-child(5) .content__card-image {
+
+.filter-brightness {
   filter: brightness(70%);
 }
-.content__card:nth-child(6) .content__card-image {
+
+.filter-hue-rotate {
   filter: hue-rotate(180deg);
 }
-.content__card:nth-child(7) .content__card-image {
+
+.filter-invert {
   filter: invert(20%);
 }
 
@@ -176,10 +182,13 @@
 
 .content__card-buttons {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   padding: 0;
   border: 2px solid transparent;
@@ -187,7 +196,7 @@
   background: none;
   cursor: pointer;
   width: 39px;
-  height: 36px;
+  height: 38px;
   outline: none;
   transition: border-color 0.3s ease;
 }
@@ -199,17 +208,10 @@
 }
 
 .card__like-button {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
   padding: 9px 17px;
   width: 130px;
   height: 38px;
-  border: 2px solid #000;
-  background-color: #fff;
-  cursor: pointer;
   flex-shrink: 0;
 }
 
@@ -224,18 +226,10 @@
 }
 
 .save-button {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   gap: 8px;
   padding: 17px 20px;
   width: var(--save-button-width);
   height: var(--save-button-height);
-  border: 2px solid #000;
-  background-color: #fff;
-  cursor: pointer;
   color: #000;
 }
 
@@ -243,7 +237,7 @@
   white-space: nowrap;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .save-button {
     flex-direction: column;
   }
@@ -260,6 +254,7 @@
   width: 341px;
   border: 2px solid #000;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .dialog[open] {
@@ -279,10 +274,16 @@
   width: 100%;
 }
 
+.save-button__icon {
+  width: var(--save-icon-size);
+  height: var(--save-icon-size);
+  flex-shrink: 0;
+}
+
 .dialog__icon {
   flex-shrink: 0;
-  width: 39px;
-  height: 39px;
+  width: 28px;
+  height: 28px;
 }
 
 .dialog__text {
@@ -294,24 +295,25 @@
 }
 
 .dialog__button {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
   padding: 9px 17px;
   width: 261px;
   height: 38px;
-  border: 2px solid #000;
-  background-color: #fff;
-  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  background-color: #fff;
+  cursor: pointer;
   outline: none;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 0 var(--accent-color, #000);
+  box-shadow: 0 0 0 var(--accent-color);
   transition: box-shadow 0.3s ease;
 }
 
@@ -339,7 +341,6 @@
   position: relative;
   z-index: 1;
   color: var(--button-text-color);
-  mix-blend-mode: difference;
   flex-shrink: 0;
 }
 
