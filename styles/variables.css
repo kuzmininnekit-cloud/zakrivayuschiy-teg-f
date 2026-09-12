@@ -28,7 +28,7 @@
   --block-width: clamp(23.4375rem, 16.285rem + 30.52vw, 43.75rem);
   --block-height: clamp(20.4375rem, 19.535rem + 3.85vw, 23rem);
   --text-stroke-color: #fff;
-  --save-button-width: clamp(19.125rem, 18.047rem + 4.6vw, 22.1875rem);
+  --save-button-width: clamp(19.125rem, 18.487rem + 2.723vw, 20.9375rem);
   --save-button-height: clamp(3.4375rem, 5.8875rem - 2.72vw, 5.25rem);
   --accent-color: #000;
   --button-text-color: #fff;

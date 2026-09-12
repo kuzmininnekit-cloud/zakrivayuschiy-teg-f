@@ -22,8 +22,7 @@
 
 .header {
   width: var(--block-width);
-  min-height: var(--header-height);
-  margin: 0px auto;
+  margin: 100px auto 98px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,6 +171,10 @@
   padding: 25px;
 }
 
+.content__card-content p {
+  line-height: 21px;
+}
+
 .content__card-text {
   font-family: var(--font-family-base);
   font-size: 18px;
@@ -182,7 +185,7 @@
 
 .content__card-buttons {
   display: flex;
-  gap: 10px;
+  gap: 7px;
 }
 
 .card__icon-button {
@@ -204,6 +207,10 @@
 .like-icon {
   width: 39px;
   height: 36px;
+}
+
+.heart {
+  transform-box: fill-box;
   transform-origin: center;
 }
 
@@ -254,7 +261,6 @@
   width: 341px;
   border: 2px solid #000;
   background-color: #fff;
-  overflow: hidden;
 }
 
 .dialog[open] {
@@ -280,8 +286,18 @@
   flex-shrink: 0;
 }
 
+.save-button__icon use {
+  width: 100%;
+  height: 100%;
+}
+
 .dialog__icon {
   flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+}
+
+.dialog__icon use {
   width: 28px;
   height: 28px;
 }
@@ -297,7 +313,7 @@
 .dialog__button {
   gap: 10px;
   padding: 9px 17px;
-  width: 261px;
+  width: 257px;
   height: 38px;
   text-transform: uppercase;
 }

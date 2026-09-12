@@ -11,23 +11,17 @@
 */
 
 @keyframes heart-scale {
-  50% {
-    transform: scale(1.2);
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
   }
 }
 
 @keyframes sparks-appear {
   50% {
     opacity: 1;
-  }
-}
-
-@keyframes heart-scale {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.25);
   }
 }
 

@@ -608,23 +608,23 @@
         class="button save-button"
         onclick="document.getElementById('save-dialog').showModal()"
       >
-        <img
-          class="save-button__icon"
-          src="./svg/floppy.svg"
-          alt=""
-          aria-hidden="true"
-        />
+        <svg class="save-button__icon" aria-hidden="true">
+          <use href="./svg/icons.svg#icon-floppy"></use>
+        </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
 
       <dialog class="dialog" id="save-dialog">
         <div class="dialog__content">
-          <img
-            class="dialog__icon"
-            src="./svg/floppy.svg"
-            alt=""
-            aria-hidden="true"
-          />
+          <svg class="dialog__icon" aria-hidden="true">
+            <use
+              href="./svg/icons.svg#icon-floppy"
+              x="5.5"
+              y="5.5"
+              width="28"
+              height="28"
+            ></use>
+          </svg>
           <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
         </div>
 
